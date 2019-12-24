@@ -1,9 +1,11 @@
 %{
+  "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm"},
   "busybox": {:hex, :busybox, "0.1.4", "9b07860c0663e7d0ace3093100ede44860bd73c22b17c2941a4b17e25893cc36", [:make, :mix], [{:elixir_make, "~> 0.5", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "circuits_gpio": {:hex, :circuits_gpio, "0.4.3", "1a53dff1eaeefb9f67f4ebc2c1852b603683eedaa6053bed51c038dd64b978bb", [:make, :mix], [{:elixir_make, "~> 0.6", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "connection": {:hex, :connection, "1.0.4", "a1cae72211f0eef17705aaededacac3eb30e6625b04a6117c1b2db6ace7d5976", [:mix], [], "hexpm"},
   "cowboy": {:hex, :cowboy, "2.7.0", "91ed100138a764355f43316b1d23d7ff6bdb0de4ea618cb5d8677c93a7a2f115", [:rebar3], [{:cowlib, "~> 2.8.0", [hex: :cowlib, repo: "hexpm", optional: false]}, {:ranch, "~> 1.7.1", [hex: :ranch, repo: "hexpm", optional: false]}], "hexpm"},
   "cowlib": {:hex, :cowlib, "2.8.0", "fd0ff1787db84ac415b8211573e9a30a3ebe71b5cbff7f720089972b2319c8a4", [:rebar3], [], "hexpm"},
+  "credo": {:hex, :credo, "1.1.5", "caec7a3cadd2e58609d7ee25b3931b129e739e070539ad1a0cd7efeeb47014f4", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm"},
   "db_connection": {:hex, :db_connection, "2.2.0", "e923e88887cd60f9891fd324ac5e0290954511d090553c415fbf54be4c57ee63", [:mix], [{:connection, "~> 1.0.2", [hex: :connection, repo: "hexpm", optional: false]}], "hexpm"},
   "decimal": {:hex, :decimal, "1.8.0", "ca462e0d885f09a1c5a342dbd7c1dcf27ea63548c65a65e67334f4b61803822e", [:mix], [], "hexpm"},
   "dns": {:hex, :dns, "2.1.2", "81c46d39f7934f0e73368355126e4266762cf227ba61d5889635d83b2d64a493", [:mix], [{:socket, "~> 0.3.13", [hex: :socket, repo: "hexpm", optional: false]}], "hexpm"},
@@ -60,6 +62,8 @@
   "toolshed": {:hex, :toolshed, "0.2.11", "0cd5312bd6a48f5b654b6ffa9239a63af9f3d200da414790fe25f066e14842a9", [:mix], [{:nerves_runtime, "~> 0.8", [hex: :nerves_runtime, repo: "hexpm", optional: true]}], "hexpm"},
   "uboot_env": {:hex, :uboot_env, "0.1.1", "b01e3ec0973e99473234f27839e29e63b5b81eba6a136a18a78d049d4813d6c5", [:mix], [], "hexpm"},
   "vintage_net": {:hex, :vintage_net, "0.7.0", "31f5f9df881968572597aaab18ab0aaa13b0383805316d34a00f79fc16bbde0d", [:make, :mix], [{:busybox, "~> 0.1.4", [hex: :busybox, repo: "hexpm", optional: true]}, {:elixir_make, "~> 0.6", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:gen_state_machine, "~> 2.0.0", [hex: :gen_state_machine, repo: "hexpm", optional: false]}, {:muontrap, "~> 0.5.0", [hex: :muontrap, repo: "hexpm", optional: false]}], "hexpm"},
+  "vintage_net_direct": {:hex, :vintage_net_direct, "0.7.0", "6a8d95432fc2fb9a9e0225bf1a6dbb7c1ba097bb509a989e947ad3f44d2b0f28", [:mix], [{:one_dhcpd, "~> 0.2.3", [hex: :one_dhcpd, repo: "hexpm", optional: false]}, {:vintage_net, "~> 0.7.0", [hex: :vintage_net, repo: "hexpm", optional: false]}], "hexpm"},
+  "vintage_net_ethernet": {:hex, :vintage_net_ethernet, "0.7.0", "b66a4da0846b4a55a471d15d8ab2bedbbef9c75c18f4e511c43777f7cfeffa09", [:mix], [{:vintage_net, "~> 0.7.0", [hex: :vintage_net, repo: "hexpm", optional: false]}], "hexpm"},
   "vintage_net_wifi": {:hex, :vintage_net_wifi, "0.7.0", "be3d8275fa40ba357159033523606c74c8f612dbd60801840df60835453a6906", [:make, :mix], [{:elixir_make, "~> 0.6", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:vintage_net, "~> 0.7.0", [hex: :vintage_net, repo: "hexpm", optional: false]}], "hexpm"},
   "vintage_net_wizard": {:hex, :vintage_net_wizard, "0.2.0", "75f869abd80a3960261dab13653edb4bd6dab575fd1c47c4ae25be065f510dec", [:mix], [{:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: false]}, {:nerves_runtime, "~> 0.10", [hex: :nerves_runtime, repo: "hexpm", optional: false]}, {:phoenix_html, "~> 2.13", [hex: :phoenix_html, repo: "hexpm", optional: false]}, {:plug_cowboy, "~> 2.0", [hex: :plug_cowboy, repo: "hexpm", optional: false]}, {:vintage_net_wifi, "~> 0.7.0", [hex: :vintage_net_wifi, repo: "hexpm", optional: false]}], "hexpm"},
 }

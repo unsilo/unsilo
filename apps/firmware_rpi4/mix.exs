@@ -42,18 +42,25 @@ defmodule FirmwareRpi4.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:unsilo, in_umbrella: true},
+      #      {:unsilo, in_umbrella: true},
       {:unsilo_web, in_umbrella: true},
 
       # Dependencies for all targets
       {:nerves, "~> 1.5.0", runtime: false},
       {:shoehorn, "~> 0.6"},
+      # {:nerves_init_gadget, "~> 0.6"},
       {:ring_logger, "~> 0.6"},
       {:toolshed, "~> 0.2"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.6", targets: @all_targets, override: true},
-      {:nerves_pack, "~> 0.1.0"},
+      {:busybox, "~> 0.1", targets: @all_targets},
+      {:vintage_net, "~> 0.7.0"},
+      {:vintage_net_direct, "~> 0.7.0"},
+      {:vintage_net_wifi, "~> 0.7.0"},
+      {:vintage_net_wizard, "~> 0.1"},
+      {:mdns_lite, "~> 0.4"},
+      {:nerves_firmware_ssh, "~> 0.3"},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.8", runtime: false, targets: :rpi},
@@ -72,8 +79,8 @@ defmodule FirmwareRpi4.MixProject do
       overwrite: true,
       cookie: "#{@app}_cookie",
       include_erts: &Nerves.Release.erts/0,
-      steps: [&Nerves.Release.init/1, :assemble],
-      strip_beams: Mix.env() == :prod
+      steps: [&Nerves.Release.init/1, :assemble]
+      #    strip_beams: Mix.env() == :prod
     ]
   end
 end

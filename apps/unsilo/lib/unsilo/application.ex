@@ -7,7 +7,7 @@ defmodule Unsilo.Application do
 
   def start(_type, _args) do
     children = [
-      Unsilo.Repo
+#      Unsilo.Repo
     ]
 
     Supervisor.start_link(children, strategy: :one_for_one, name: Unsilo.Supervisor)
