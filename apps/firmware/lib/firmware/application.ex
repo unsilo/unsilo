@@ -1,26 +1,22 @@
-defmodule FirmwareRpi4.Application do
+defmodule Firmware.Application do
   @moduledoc false
 
   use Application
 
   def start(_type, _args) do
-    opts = [strategy: :one_for_one, name: FirmwareRpi4.Supervisor]
+    opts = [strategy: :one_for_one, name: Firmware.Supervisor]
 
-    children =
-      [
-      ] ++ children(target())
+    children = [] ++ children(target())
 
     Supervisor.start_link(children, opts)
   end
 
   def children(:host) do
-    [
-    ]
+    []
   end
 
   def children(_target) do
-    [
-    ]
+    []
   end
 
   def target() do

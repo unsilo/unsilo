@@ -1,4 +1,4 @@
-defmodule FirmwareRpi4 do
+defmodule Firmware do
   @moduledoc """
   Documentation for FirmwareRpi4.
   """
