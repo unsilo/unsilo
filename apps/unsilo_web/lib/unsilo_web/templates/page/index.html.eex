@@ -1,3 +1,7 @@
 <%= for v <- @volumes do %>
 <%= inspect(v) %><BR>
 <% end %>
+
+<%= for v <- @mnts do %>
+<%= inspect(v) %><BR>
+<% end %>

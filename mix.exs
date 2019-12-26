@@ -21,7 +21,7 @@ defmodule Unsilo.Umbrella.MixProject do
         applications: [firmware_rpi4: :permanent],
         version: {:from_app, :firmware_rpi4},
         overwrite: true,
-        cookie: "#{@app}_cookie",
+        cookie: "firmware_rpi4_cookie",
         include_erts: &Nerves.Release.erts/0,
         steps: [&Nerves.Release.init/1, :assemble],
         strip_beams: Mix.env() == :prod

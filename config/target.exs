@@ -6,10 +6,11 @@ config :nerves_firmware_ssh,
   ]
 
 config :nerves, :firmware, rootfs_overlay: "rootfs_overlay"
-config :nerves, :erlinit, mount: "ttyAMA0"
+
+config :nerves, :erlinit, name: "chomp"
 
 config :shoehorn,
-  init: [:nerves_runtime, :vintage_net],
+  init: [:nerves_runtime, :nerves_pack],
   app: Mix.Project.config()[:app]
 
 config :logger, backends: [RingLogger]
