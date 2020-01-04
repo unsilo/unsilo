@@ -1,7 +1,10 @@
+
+root
 <%= for v <- @volumes do %>
 <%= inspect(v) %><BR>
 <% end %>
 
+media
 <%= for v <- @mnts do %>
 <%= inspect(v) %><BR>
 <% end %>

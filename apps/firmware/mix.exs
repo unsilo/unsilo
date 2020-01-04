@@ -3,7 +3,7 @@ defmodule Firmware.MixProject do
 
   @app :firmware
   @version "0.1.0"
-  @all_targets [:rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :rpi4, :bbb, :x86_64]
+  @all_targets [:uns_rpi4, :rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :rpi4, :bbb, :x86_64]
 
   def project do
     [
@@ -43,6 +43,7 @@ defmodule Firmware.MixProject do
   defp deps do
     [
       #      {:unsilo, in_umbrella: true},
+      {:device, in_umbrella: true},
       {:unsilo_web, in_umbrella: true},
 
       # Dependencies for all targets
@@ -64,6 +65,7 @@ defmodule Firmware.MixProject do
       {:nerves_pack, "~> 0.1.0"},
 
       # Dependencies for specific targets
+      {:uns_rpi4, path: "../../../uns_rpi4", runtime: false, targets: :uns_rpi4},
       {:nerves_system_rpi, "~> 1.8", runtime: false, targets: :rpi},
       {:nerves_system_rpi0, "~> 1.8", runtime: false, targets: :rpi0},
       {:nerves_system_rpi2, "~> 1.8", runtime: false, targets: :rpi2},
