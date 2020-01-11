@@ -12,7 +12,22 @@ defmodule Device do
       :world
 
   """
-  def hello do
-    :world
+  def cleanup_output({result, _status}) do
+    result
+    |> String.split("\n")
+    |> Enum.each(fn r -> IO.inspect(r) end)
+  end
+
+  def cleanup_output(result) when is_binary(result) do
+    result
+    |> String.split("\n")
+    |> Enum.each(fn r -> IO.inspect(r) end)
+  end
+
+  def cleanup_output(result) do
+    result
+    |> to_string
+    |> String.split("\n")
+    |> Enum.each(fn r -> IO.inspect(r) end)
   end
 end

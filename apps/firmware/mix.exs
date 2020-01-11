@@ -49,19 +49,11 @@ defmodule Firmware.MixProject do
       # Dependencies for all targets
       {:nerves, "~> 1.5.0", runtime: false},
       {:shoehorn, "~> 0.6"},
-      # {:nerves_init_gadget, "~> 0.6"},
       {:ring_logger, "~> 0.6"},
       {:toolshed, "~> 0.2"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.6", targets: @all_targets, override: true},
-      # {:busybox, "~> 0.1", targets: @all_targets},
-      # {:vintage_net, "~> 0.7.0"},
-      # {:vintage_net_direct, "~> 0.7.0"},
-      # {:vintage_net_wifi, "~> 0.7.0"},
-      # {:vintage_net_wizard, "~> 0.1"},
-      # {:mdns_lite, "~> 0.4"},
-      # {:nerves_firmware_ssh, "~> 0.3"},
       {:nerves_pack, "~> 0.1.0"},
 
       # Dependencies for specific targets

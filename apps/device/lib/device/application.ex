@@ -8,6 +8,7 @@ defmodule Device.Application do
   def start(_type, _args) do
     children = [
       Device.Disks
+      #     {MuonTrap.Daemon, ["sudo -u postgres postgres", ["-D", "/root/unsilo/postgres"], []]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -11,7 +11,9 @@ defmodule Device.Disks do
 
     Logger.info("trying to mount device")
 
-    System.cmd("mount", ["/dev/sda1", "/root/unsilo/"])
+    :os.cmd(
+      'mount.exfat -o defaults,uid=65534,gid=65534,dmask=027,fmask=027 /dev/sda1 /root/unsilo'
+    )
     |> IO.inspect(label: "the mount results")
 
     # See https://hexdocs.pm/elixir/Supervisor.html
